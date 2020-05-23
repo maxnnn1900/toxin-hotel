@@ -17,6 +17,3 @@
 //=include ../node_modules/bootstrap/js/dist/scrollspy.js
 //=include ../node_modules/bootstrap/js/dist/tab.js
 //=include ../node_modules/bootstrap/js/dist/toast.js
-
-// Импортируем другие js-файлы
-//=include script.js
