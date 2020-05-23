@@ -1,15 +1,15 @@
-const jsFiles = [
-  $.path.jquery,
-  $.path.js,
-];
-
-
 module.exports = function () {
   $.gulp.task('scripts', function() {
-    return $.gulp.src(jsFiles)
+    return $.gulp.src('js/main.js')
       .pipe($.glp.plumber())
+      .pipe($.glp.include())
       .pipe($.glp.sourcemaps.init())
-      .pipe($.glp.babel({presets: ['@babel/preset-env']}))
+      .pipe($.glp.babel({presets: [
+        [
+          '@babel/preset-env',    
+          { "modules": false }
+        ]
+      ]}))
       .pipe($.glp.concat('all.js'))
       .pipe($.glp.uglify())
       .pipe($.glp.rename('all.min.js'))
