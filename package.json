@@ -5,8 +5,8 @@
   "author": "maxnnn1900",
   "license": "MIT",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp build && gulp serve"
+    "build": "NODE_ENV='production' gulp build",
+    "start": "NODE_ENV='development' gulp build && gulp serve"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -25,6 +25,7 @@
     "gulp-cheerio": "^1.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-include": "^2.4.1",
     "gulp-load-plugins": "^2.0.3",

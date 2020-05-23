@@ -13,7 +13,7 @@ module.exports = function () {
       .pipe($.glp.addSrc.prepend('js/main.js'))
       .pipe($.glp.include())
       .pipe($.glp.concat('all.js'))
-      .pipe($.glp.uglify())
+      .pipe($.glp.if(process.env.NODE_ENV == 'production', $.glp.uglify()))
       .pipe($.glp.rename('all.min.js'))
       // .pipe($.glp.sourcemaps.write(''))
       .pipe($.gulp.dest('build/js'))
