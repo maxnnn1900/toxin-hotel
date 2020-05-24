@@ -14,7 +14,7 @@ module.exports = function () {
       )
       .pipe($.glp.rename('style.min.css'))
       .pipe($.glp.sourcemaps.write(''))
-      .pipe($.gulp.dest('build/css'))
+      .pipe($.gulp.dest($.path.build + '/css'))
       .pipe($.browserSync.stream());
   });
 };

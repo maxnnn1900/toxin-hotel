@@ -1,7 +1,7 @@
 module.exports = function () {
   $.gulp.task('serve', function() {
     $.browserSync.init({
-      server: 'build/',
+      server: $.path.build + '/',
       notify: false,
     });
     $.gulp.watch('sass/**/*.scss', {usePolling: true}, $.gulp.series('sass'));

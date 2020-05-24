@@ -7,6 +7,7 @@ global.$ = {
   pngquant: require('imagemin-pngquant'),
   path: {
     config: require('./gulp/config.js'),
+    build: 'build'
   }
 };
 

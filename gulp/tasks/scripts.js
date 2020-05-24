@@ -16,7 +16,7 @@ module.exports = function () {
       .pipe($.glp.if(process.env.NODE_ENV == 'production', $.glp.uglify()))
       .pipe($.glp.rename('all.min.js'))
       // .pipe($.glp.sourcemaps.write(''))
-      .pipe($.gulp.dest('build/js'))
+      .pipe($.gulp.dest($.path.build + '/js'))
       .pipe($.browserSync.stream());
   });
 };

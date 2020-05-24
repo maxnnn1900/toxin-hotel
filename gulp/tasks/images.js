@@ -12,6 +12,6 @@ module.exports = function () {
         $.glp.imagemin.optipng({optimizationLevel: 3}),
         $.pngquant({quality: [0.65, 0.7], speed: 5}),
       ]))
-      .pipe($.gulp.dest('build/img'));
+      .pipe($.gulp.dest($.path.build + '/img'));
   });
 };
