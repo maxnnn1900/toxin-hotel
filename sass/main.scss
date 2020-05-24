@@ -1,8 +1,8 @@
 // Переопределение дефолтных значений переменных Bootstrap 4 и определение своих
 @import "variables";
 
-// Полезные миксины
-@import "mixins/em";
+// Полезные миксины и функции
+@import "helpers/_em";
 
 // Подключение нужных SCSS исходников Bootstrap 4
 @import "../node_modules/bootstrap/scss/_functions";
